@@ -8,22 +8,10 @@
 namespace Spryker\Glue\PushNotificationsBackendApi\Processor\Mapper;
 
 use Generated\Shared\Transfer\ApiPushNotificationSubscriptionsAttributesTransfer;
-use Generated\Shared\Transfer\GlueRequestTransfer;
 use Generated\Shared\Transfer\PushNotificationSubscriptionTransfer;
 
-interface PushNotificationSubscriptionResourceMapperInterface
+interface PushNotificationSubscriptionMapperInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ApiPushNotificationSubscriptionsAttributesTransfer $apiPushNotificationSubscriptionsAttributesTransfer
-     * @param \Generated\Shared\Transfer\PushNotificationSubscriptionTransfer $pushNotificationSubscriptionTransfer
-     *
-     * @return \Generated\Shared\Transfer\PushNotificationSubscriptionTransfer
-     */
-    public function mapApiPushNotificationSubscriptionsAttributesTransferToPushNotificationSubscriptionTransfer(
-        ApiPushNotificationSubscriptionsAttributesTransfer $apiPushNotificationSubscriptionsAttributesTransfer,
-        PushNotificationSubscriptionTransfer $pushNotificationSubscriptionTransfer
-    ): PushNotificationSubscriptionTransfer;
-
     /**
      * @param \Generated\Shared\Transfer\PushNotificationSubscriptionTransfer $pushNotificationSubscriptionTransfer
      * @param \Generated\Shared\Transfer\ApiPushNotificationSubscriptionsAttributesTransfer $apiPushNotificationSubscriptionsAttributesTransfer
@@ -36,13 +24,13 @@ interface PushNotificationSubscriptionResourceMapperInterface
     ): ApiPushNotificationSubscriptionsAttributesTransfer;
 
     /**
-     * @param \Generated\Shared\Transfer\GlueRequestTransfer $glueRequestTransfer
+     * @param \Generated\Shared\Transfer\ApiPushNotificationSubscriptionsAttributesTransfer $apiPushNotificationSubscriptionsAttributesTransfer
      * @param \Generated\Shared\Transfer\PushNotificationSubscriptionTransfer $pushNotificationSubscriptionTransfer
      *
      * @return \Generated\Shared\Transfer\PushNotificationSubscriptionTransfer
      */
-    public function mapGlueRequestTransferToPushNotificationSubscriptionTransfer(
-        GlueRequestTransfer $glueRequestTransfer,
+    public function mapApiPushNotificationSubscriptionsAttributesTransferToPushNotificationSubscriptionTransfer(
+        ApiPushNotificationSubscriptionsAttributesTransfer $apiPushNotificationSubscriptionsAttributesTransfer,
         PushNotificationSubscriptionTransfer $pushNotificationSubscriptionTransfer
     ): PushNotificationSubscriptionTransfer;
 }

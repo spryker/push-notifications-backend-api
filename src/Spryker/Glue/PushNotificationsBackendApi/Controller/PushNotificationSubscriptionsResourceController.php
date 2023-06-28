@@ -15,7 +15,7 @@ use Spryker\Glue\Kernel\Backend\Controller\AbstractBackendApiController;
 /**
  * @method \Spryker\Glue\PushNotificationsBackendApi\PushNotificationsBackendApiFactory getFactory()
  */
-class PushNotificationSubscriptionResourceController extends AbstractBackendApiController
+class PushNotificationSubscriptionsResourceController extends AbstractBackendApiController
 {
     /**
      * @Glue({
@@ -23,14 +23,9 @@ class PushNotificationSubscriptionResourceController extends AbstractBackendApiC
      *          "summary": [
      *              "Creates a push notification subscription."
      *          ],
-     *          "parameters": [
-     *              {
-     *                  "ref": "acceptLanguage"
-     *              },
-     *              {
-     *                  "ref": "ContentType"
-     *              }
-     *          ],
+     *          "parameters": [{
+     *              "ref": "acceptLanguage"
+     *          }],
      *          "responses": {
      *              "201": "Expected response to a valid request.",
      *              "400": "Expected response to a bad request."
